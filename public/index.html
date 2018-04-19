@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kubecoin Dashboard</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="./dashboard.js"></script>
+</head>
+
+<body onload="createDashboard()">
+  <div class="board">
+    <section class="some-area fill-height-or-more">
+      <div class="overview">
+        <div class="column"><img class="logo" src="./images/logo.svg"></div>
+        <div class="column effect2">
+          <div class="databox">
+            <div class="number">200</div>
+            <div class="icon"><img class="person" src="./images/person.svg"></div>
+            <div class="label">participants</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="databox">
+            <div class="number">2541234</div>
+            <div class="icon"><img class="footprint" src="./images/footprint.svg"></div>
+            <div class="label">total steps</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="databox">
+            <div class="number">40/60</div>
+            <div class="icon">
+              <div class="pie"></div>
+            </div>
+            <div class="label">iOS/Android</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="databox">
+            <div class="number">4.5</div>
+            <div class="icon"><img class="distance" src="./images/distance.svg"></div>
+            <div class="label">km walked</div>
+          </div>
+        </div>
+      </div>
+      <div class="blockchain">
+        <div class="header">Kubecoin Blockchain</div>
+      </div>
+    </section>
+    <section class="leaderboard">
+      <div class="header">Leaderboard</div>
+      <div id="leaderAnchor" class="leaders">
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
