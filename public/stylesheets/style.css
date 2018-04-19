@@ -238,3 +238,115 @@ body, html {
   height: calc(100% - 20px);
   /*border: 1px solid #dddddd;*/
 }
+
+/* Blockchain style */
+
+.blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 30%;
+  margin: 20px;
+  color: #223A5E;
+}
+
+.blocktop {
+  display: flex;
+  flex-direction: row;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #F7CEE0;
+  border-color: #F7CEE0;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.blockbottom {
+  display: flex;
+  flex-direction: row;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #F7CEE0;
+  border-color: #F7CEE0;
+  height: 50px;
+  font-size: 1em;
+}
+
+.blockid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.blockprint {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+  font-size: .8em;
+}
+
+.printlabel {
+  font-weight: bold;
+  padding: 2px;
+}
+
+.fingerprint {
+  padding: 2px;
+}
+
+.payload {
+  height: 200px;
+  border-right: 1px solid #F7CEE0;
+  border-left: 1px solid #F7CEE0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.wordwrap {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.hash {
+  font-size: .7em;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-weight: bold;
+}
