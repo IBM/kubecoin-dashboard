@@ -98,6 +98,7 @@ body, html {
 
 .avatar {
   height: 80px;
+  object-fit: contain;
 }
 
 .standingData {
@@ -147,7 +148,7 @@ body, html {
 .blockchain {
   background: white;
   height:65%;
-  overflow:hidden;
+  overflow:scroll;
   /*border: 1px solid #cccccc;*/
 }
 
@@ -214,12 +215,12 @@ body, html {
   width: 80px;
   height: 80px;
   margin: 20px;
-  border-radius: 50%;
+  /* border-radius: 50%;
   background: #b61c50;
-  background-image: linear-gradient(to right, transparent 50%, #C3DBD4 0);
+  background-image: linear-gradient(to right, transparent 50%, #C3DBD4 0); */
 }
 
-.pie::before {
+/* .pie::before {
   content: '';
   display: block;
   margin-left: 50%;
@@ -228,7 +229,7 @@ body, html {
   background: #C3DBD4;
   transform-origin: left;
   transform: rotate(.1turn);
-}
+} */
 
 .leaderboard {
   width: 35%;

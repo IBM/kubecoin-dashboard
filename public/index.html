@@ -7,7 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/style.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="./dashboard.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./events.js"></script>
 </head>
 
 <body onload="createDashboard()">
@@ -17,30 +21,30 @@
         <div class="column"><img class="logo" src="./images/logo.svg"></div>
         <div class="column effect2">
           <div class="databox">
-            <div class="number">200</div>
+            <div id="numberOfParticipants" class="number">-</div>
             <div class="icon"><img class="person" src="./images/person.svg"></div>
             <div class="label">participants</div>
           </div>
         </div>
         <div class="column">
           <div class="databox">
-            <div class="number">2541234</div>
+            <div id="numberOfSteps" class="number">-</div>
             <div class="icon"><img class="footprint" src="./images/footprint.svg"></div>
             <div class="label">total steps</div>
           </div>
         </div>
         <div class="column">
           <div class="databox">
-            <div class="number">40/60</div>
+            <div id="totalDevices" class="number">40/60</div>
             <div class="icon">
-              <div class="pie"></div>
+              <div id="pieChart" class="pie"></div>
             </div>
             <div class="label">iOS/Android</div>
           </div>
         </div>
         <div class="column">
           <div class="databox">
-            <div class="number">4.5</div>
+            <div id="distanceWalked" class="number">4.5</div>
             <div class="icon"><img class="distance" src="./images/distance.svg"></div>
             <div class="label">km walked</div>
           </div>
@@ -49,99 +53,6 @@
       <div class="blockchain">
         <div class="header">Kubecoin Blockchain</div>
         <div id="blockAnchor" class="blocks">
-          <div class="block">
-            <div class="blocktop">
-              <div class="blockid">1548</div>
-              <div class="blockprint">
-                <div class="printlabel">Fingerprint</div>
-                <div class="fingerprint">d7ad5887463dd2232c05</div>
-              </div>
-            </div>
-            <div class="payload wordwrap">{"id":"0ca96f1b-c91e-4ce3-a094-0e5dec53b74c","memberType":"user","fitcoinsBalance":0,"totalSteps":0,"stepsUsedForConversion":0,"contractIds":null}</div>
-            <div class="blockbottom">
-              <div class="hash wordwrap">94dd147533d044bd3a6a982290376803abff57b311d95e119ef8ce22f23a1195
-              </div>
-            </div>
-          </div>
-
-          <div class="block">
-            <div class="blocktop">
-              <div class="blockid">1548</div>
-              <div class="blockprint">
-                <div class="printlabel">Fingerprint</div>
-                <div class="fingerprint">d7ad5887463dd2232c05</div>
-              </div>
-            </div>
-            <div class="payload wordwrap">{"id":"0ca96f1b-c91e-4ce3-a094-0e5dec53b74c","memberType":"user","fitcoinsBalance":0,"totalSteps":0,"stepsUsedForConversion":0,"contractIds":null}</div>
-            <div class="blockbottom">
-              <div class="hash wordwrap">94dd147533d044bd3a6a982290376803abff57b311d95e119ef8ce22f23a1195
-              </div>
-            </div>
-          </div>
-
-
-          <div class="block">
-            <div class="blocktop">
-              <div class="blockid">1548</div>
-              <div class="blockprint">
-                <div class="printlabel">Fingerprint</div>
-                <div class="fingerprint">d7ad5887463dd2232c05</div>
-              </div>
-            </div>
-            <div class="payload wordwrap">{"id":"0ca96f1b-c91e-4ce3-a094-0e5dec53b74c","memberType":"user","fitcoinsBalance":0,"totalSteps":0,"stepsUsedForConversion":0,"contractIds":null}</div>
-            <div class="blockbottom">
-              <div class="hash wordwrap">94dd147533d044bd3a6a982290376803abff57b311d95e119ef8ce22f23a1195
-              </div>
-            </div>
-          </div>
-
-
-          <div class="block">
-            <div class="blocktop">
-              <div class="blockid">1548</div>
-              <div class="blockprint">
-                <div class="printlabel">Fingerprint</div>
-                <div class="fingerprint">d7ad5887463dd2232c05</div>
-              </div>
-            </div>
-            <div class="payload wordwrap">{"id":"0ca96f1b-c91e-4ce3-a094-0e5dec53b74c","memberType":"user","fitcoinsBalance":0,"totalSteps":0,"stepsUsedForConversion":0,"contractIds":null}</div>
-            <div class="blockbottom">
-              <div class="hash wordwrap">94dd147533d044bd3a6a982290376803abff57b311d95e119ef8ce22f23a1195
-              </div>
-            </div>
-          </div>
-
-
-          <div class="block">
-            <div class="blocktop">
-              <div class="blockid">1548</div>
-              <div class="blockprint">
-                <div class="printlabel">Fingerprint</div>
-                <div class="fingerprint">d7ad5887463dd2232c05</div>
-              </div>
-            </div>
-            <div class="payload wordwrap">{"id":"0ca96f1b-c91e-4ce3-a094-0e5dec53b74c","memberType":"user","fitcoinsBalance":0,"totalSteps":0,"stepsUsedForConversion":0,"contractIds":null}</div>
-            <div class="blockbottom">
-              <div class="hash wordwrap">94dd147533d044bd3a6a982290376803abff57b311d95e119ef8ce22f23a1195
-              </div>
-            </div>
-          </div>
-
-
-          <div class="block">
-            <div class="blocktop">
-              <div class="blockid">1548</div>
-              <div class="blockprint">
-                <div class="printlabel">Fingerprint</div>
-                <div class="fingerprint">d7ad5887463dd2232c05</div>
-              </div>
-            </div>
-            <div class="payload wordwrap">{"id":"0ca96f1b-c91e-4ce3-a094-0e5dec53b74c","memberType":"user","fitcoinsBalance":0,"totalSteps":0,"stepsUsedForConversion":0,"contractIds":null}</div>
-            <div class="blockbottom">
-              <div class="hash wordwrap">94dd147533d044bd3a6a982290376803abff57b311d95e119ef8ce22f23a1195
-              </div>
-            </div>
-          </div>
 
 
         </div>
@@ -149,7 +60,7 @@
     </section>
     <section class="leaderboard">
       <div class="header">Leaderboard</div>
-      <div id="leaderAnchor" class="leaders">
+      <div id="leaderAnchor" class="leaders" onScroll="onScroll();">
       </div>
     </section>
   </div>

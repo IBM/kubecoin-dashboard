@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: adorable
-  host: adorable
+  name: kubecoin
+  host: kubecoin
   disk_quota: 1024M
