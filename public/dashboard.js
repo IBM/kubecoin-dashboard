@@ -184,6 +184,7 @@ function createDashboard() {
   setInterval(function() {
     var anchor = document.getElementById('leaderAnchor');
     anchor.innerHTML = "";
+    map.clear();
     getStandingData();
   },10000);
   getTotalUsers();
