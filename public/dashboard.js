@@ -179,7 +179,13 @@ function drawChart(android, ios) {
 function createDashboard() {
   // addStandings(standingdata);
   // addBlocks(blockData);
+
   getStandingData();
+  setInterval(function() {
+    var anchor = document.getElementById('leaderAnchor');
+    anchor.innerHTML = "";
+    getStandingData();
+  },10000);
   getTotalUsers();
   getTotalSteps();
   getTotalDevices();
