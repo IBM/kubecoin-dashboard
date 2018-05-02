@@ -327,6 +327,7 @@ body, html {
   padding: 15px;
   font-size: 1em;
   font-weight: 300;
+  overflow-y: scroll;
 }
 
 .wordwrap {
