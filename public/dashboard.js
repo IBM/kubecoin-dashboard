@@ -197,5 +197,8 @@ function createDashboard() {
     var distance = document.getElementById('distanceWalked');
     distance.innerHTML = "";
     getStandingData();
-  },10000);
+    getTotalUsers();
+    getTotalSteps();
+    getTotalDevices();
+  },60000);
 }
