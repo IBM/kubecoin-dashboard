@@ -181,13 +181,21 @@ function createDashboard() {
   // addBlocks(blockData);
 
   getStandingData();
+  getTotalUsers();
+  getTotalSteps();
+  getTotalDevices();
   setInterval(function() {
     var anchor = document.getElementById('leaderAnchor');
     anchor.innerHTML = "";
     map.clear();
+    var users = document.getElementById('numberOfParticipants');
+    users.innerHTML = "";
+    var steps = document.getElementById('numberOfSteps');
+    steps.innerHTML = "";
+    var devices = document.getElementById('totalDevices');
+    devices.innerHTML = "";
+    var distance = document.getElementById('distanceWalked');
+    distance.innerHTML = "";
     getStandingData();
   },10000);
-  getTotalUsers();
-  getTotalSteps();
-  getTotalDevices();
 }
